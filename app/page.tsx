@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Container from "./Components/Container";
 import EmptyState from "./Components/EmptyState";
@@ -29,7 +30,7 @@ export default async function Home() {
           gap-8
         "
       >
-        {listings.map((listing: any) =>{
+        {listings.map((listing) =>{
           return (
             <ListingCard
               currentUser={currentUser}
