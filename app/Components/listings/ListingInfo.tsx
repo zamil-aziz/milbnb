@@ -22,7 +22,7 @@ interface ListingInfoProps {
         icon: IconType;
         label: string;
         description: string;
-    } | undefined
+    } | null | undefined
     locationValue: string;
 }
 
@@ -86,4 +86,5 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
         </div>
     )
 }
+
 export default ListingInfo;
