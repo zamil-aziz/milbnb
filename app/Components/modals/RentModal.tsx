@@ -12,11 +12,11 @@ import CategoryInput from "../inputs/CategoryInput";
 import CountrySelect from "../inputs/CountrySelect";
 import dynamic from "next/dynamic";
 import Counter from "../inputs/Counter";
-import ImageUpload from "../inputs/imageUpload";
 import Input from "../inputs/Inputs";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import ImageUpload from "../inputs/ImageUpload";
 
 
 

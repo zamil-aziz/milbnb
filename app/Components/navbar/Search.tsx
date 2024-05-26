@@ -1,10 +1,13 @@
 'use client';
 
+import useSearchModal from "@/app/hooks/useSearchModal";
 import { IoMdSearch } from "react-icons/io";
 
 const Search = () => {
+    const searchModal = useSearchModal();
     return(
         <div
+            onClick={searchModal.onOpen}
             className="
                 border-[1px]
                 w-full

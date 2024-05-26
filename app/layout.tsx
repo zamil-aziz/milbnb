@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 import LoginModal from "./Components/modals/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
 import RentModal from "./Components/modals/RentModal";
+import SearchModal from "./Components/modals/SearchModal";
 
 const inter = Nunito({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default async function RootLayout({
         // style={{caretColor:'transparent'}}
       >
         <Toaster/>
+        <SearchModal/>
         <RentModal/>
         <LoginModal/>
         <RegisterModal/>
