@@ -8,6 +8,7 @@ import LoginModal from "./Components/modals/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
 import RentModal from "./Components/modals/RentModal";
 import SearchModal from "./Components/modals/SearchModal";
+import { Suspense } from "react";
 
 const inter = Nunito({ subsets: ["latin"] });
 
@@ -29,12 +30,14 @@ export default async function RootLayout({
         className={inter.className} 
         // style={{caretColor:'transparent'}}
       >
-        <Toaster/>
-        <SearchModal/>
-        <RentModal/>
-        <LoginModal/>
-        <RegisterModal/>
-        <Navbar currentUser={currentUser} />
+        <Suspense>
+          <Toaster/>
+          <SearchModal/>
+          <RentModal/>
+          <LoginModal/>
+          <RegisterModal/>
+          <Navbar currentUser={currentUser} />
+        </Suspense>
         <div className="pb-20 pt-28">
           {children}
         </div> 
