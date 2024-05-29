@@ -9,6 +9,7 @@ import getCurrentUser from "./actions/getCurrentUser";
 import RentModal from "./Components/modals/RentModal";
 import SearchModal from "./Components/modals/SearchModal";
 import { Suspense } from "react";
+import Loading from "./loading";
 
 const inter = Nunito({ subsets: ["latin"] });
 
@@ -30,7 +31,7 @@ export default async function RootLayout({
         className={inter.className} 
         style={{caretColor:'transparent'}}
       >
-        <Suspense>
+        <Suspense fallback={<Loading />}>
           <Toaster/>
           <SearchModal/>
           <RentModal/>
