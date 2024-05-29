@@ -13,8 +13,8 @@ import { Suspense } from "react";
 const inter = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AirBNB",
-  description: "AirBNB Clone",
+  title: "AirBNB Clone",
+  description: "Zamil's Practice Website",
 };
 
 export default async function RootLayout({
