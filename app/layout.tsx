@@ -28,7 +28,7 @@ export default async function RootLayout({
     <html lang="en">
       <body 
         className={inter.className} 
-        // style={{caretColor:'transparent'}}
+        style={{caretColor:'transparent'}}
       >
         <Suspense>
           <Toaster/>
@@ -37,10 +37,10 @@ export default async function RootLayout({
           <LoginModal/>
           <RegisterModal/>
           <Navbar currentUser={currentUser} />
+          <div className="pb-20 pt-28">
+            {children}
+          </div> 
         </Suspense>
-        <div className="pb-20 pt-28">
-          {children}
-        </div> 
       </body>
     </html>
   );
