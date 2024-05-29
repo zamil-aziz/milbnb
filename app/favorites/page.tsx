@@ -1,4 +1,3 @@
-'use client';
 import EmptyState from "../Components/EmptyState"
 import getCurrentUser from "../actions/getCurrentUser";
 import getFavoriteListings from "../actions/getFavoriteListings";
