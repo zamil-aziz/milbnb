@@ -14,7 +14,7 @@ import Loading from "./loading";
 const inter = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AirBNB Clone",
+  title: "Milbnb",
   description: "Zamil's Practice Website",
 };
 
