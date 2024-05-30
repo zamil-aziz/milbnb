@@ -1,8 +1,8 @@
 'use client';
 
-import { use, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
-import { FieldValues, SubmitHandler, set, useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 import useRentModal from "@/app/hooks/useRentModal";
 import Modal from "./Modal";
@@ -273,7 +273,7 @@ const RentModal = () => {
             actionLabel={actionLabel}
             secondaryActionLabel={secondaryActionLabel}
             secondaryAction={step === STEPS.CATEGORY ? undefined : onBack}
-            title="Airbnb your home!"
+            title="Milbnb your home!"
             body={bodyContent}
         />
     )
