@@ -5,7 +5,8 @@ import useSearchModal from "@/app/hooks/useSearchModal";
 import { differenceInDays } from "date-fns";
 import { useSearchParams } from "next/navigation";
 import { useMemo } from "react";
-import { IoMdSearch } from "react-icons/io";
+import { GrFormSearch } from "react-icons/gr";
+
 
 const Search = () => {
     const searchModal = useSearchModal();
@@ -105,7 +106,7 @@ const Search = () => {
                 >
                     <div className="hidden sm:block">{guestLabel}</div>
                     <div className="p2 bg-rose-500 rounded-full text-white">
-                        <IoMdSearch   size={20} />
+                        <GrFormSearch size={30} />
                     </div>
                 </div>
             </div>
