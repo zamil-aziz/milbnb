@@ -37,9 +37,9 @@ const useFavorite = ({
         try {
             let request;
             if (hasFavorited){
-                request = () => axios.delete(`https://clone-practice.vercel.app/api/favorites/${listingId}`);
+                request = () => axios.delete(`/api/favorites/${listingId}`);
             } else {
-                request = () => axios.post(`https://clone-practice.vercel.app/api/favorites/${listingId}`);
+                request = () => axios.post(`/api/favorites/${listingId}`);
             }
 
             await request();
