@@ -37,15 +37,17 @@ const useFavorite = ({
         try {
             let request;
             if (hasFavorited){
-                request = () => axios.delete(`/api/favorites/${listingId}`);
-                toast.success('Removed from favorites');
+                request = () => axios.delete(`/api/favorites/${listingId}`);  
+                await request();
+                router.refresh();
+                toast.success('Removed from favorites'); 
             } else {
                 request = () => axios.post(`/api/favorites/${listingId}`);
+                await request();
+                router.refresh();
                 toast.success('Added to favorites!');
             }
-            await request();
-            router.refresh();
-            
+                
         }
         catch (error) {
             toast.error('Something went wrong.')
