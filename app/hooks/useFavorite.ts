@@ -50,11 +50,7 @@ const useFavorite = ({
             toast.error('Something went wrong.')
         }
     }, [
-        currentUser,
         hasFavorited,
-        listingId,
-        loginModal,
-        router
     ]);
 
     return {
