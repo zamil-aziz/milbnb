@@ -31,18 +31,17 @@ export default async function RootLayout({
         className={inter.className} 
         style={{caretColor:'transparent'}}
       >
-        
-        <Toaster/>
-        <SearchModal/>  
-        <RentModal/>
-        <LoginModal/>
-        <RegisterModal/>
         <Suspense fallback={<Loading />}>
+          <Toaster/>
+          <SearchModal/>  
+          <RentModal/>
+          <LoginModal/>
+          <RegisterModal/>
           <Navbar currentUser={currentUser} />
-          <div className="pb-20 pt-28">
-            {children}
-          </div> 
-        </Suspense>
+          </Suspense>
+        <div className="pb-20 pt-28">
+          {children}
+        </div> 
       </body>
     </html>
   );
