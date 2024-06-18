@@ -110,7 +110,7 @@ const LoginModal = () => {
                 "
             >
                 <div>
-                    First time using Airbnb?
+                    First time using Milbnb?
                 </div>
                 <div
                     onClick={toggle}

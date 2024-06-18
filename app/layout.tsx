@@ -14,8 +14,8 @@ import Loading from "./loading";
 const inter = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Milbnb",
-  description: "Zamil's Practice Website",
+  title: "milbnb",
+  description: "milbnb",
 };
 
 export default async function RootLayout({
@@ -38,7 +38,7 @@ export default async function RootLayout({
           <LoginModal/>
           <RegisterModal/>
           <Navbar currentUser={currentUser} />
-          </Suspense>
+        </Suspense>
         <div className="pb-20 pt-28">
           {children}
         </div> 
