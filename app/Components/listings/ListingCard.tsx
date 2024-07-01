@@ -75,6 +75,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
                     <Image
                         fill
                         alt="Listing"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         src={data.imageSrc}
                         className=" 
                             object-cover
