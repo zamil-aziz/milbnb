@@ -100,7 +100,7 @@ const Categories = () => {
      if (!isMainPage){
         return null;
      }
-    
+
     return (
         <Container>
             <div
@@ -120,7 +120,7 @@ const Categories = () => {
                         selected={category === item.label}
                         icon={item.icon} description={""}                    />
                 ))}
-            </div>     
+            </div>
         </Container>
     )
 }
