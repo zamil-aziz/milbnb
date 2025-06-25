@@ -23,7 +23,7 @@ const SearchModal = () => {
     const params = useSearchParams();
     const searchModal = useSearchModal();
 
-    const [location, setLocation] = useState<CountrySelectValue>(); 
+    const [location, setLocation] = useState<CountrySelectValue>();
     const [step, setStep] = useState(STEPS.LOCATION);
     const [guestCount, setGuestCount] = useState(1);
     const [roomCount, setRoomCount] = useState(1);
@@ -35,16 +35,16 @@ const SearchModal = () => {
     });
 
     const Map = useMemo(() => dynamic(() => import('../Map'), {
-        ssr:false,
-    }),[location]);
+        ssr: false,
+    }), [location]);
 
     const onBack = useCallback(() => {
-        setStep((value) => value -1);
+        setStep((value) => value - 1);
     }, []);
 
     const onNext = useCallback(() => {
-        setStep((value) => value +1);
-    },[]);
+        setStep((value) => value + 1);
+    }, []);
 
     const onSubmit = useCallback(async () => {
         if (step !== STEPS.INFO) {
@@ -69,7 +69,7 @@ const SearchModal = () => {
             updatedQuery.startDate = formatISO(dateRange.startDate)
         }
 
-        if (dateRange.endDate){
+        if (dateRange.endDate) {
             updatedQuery.endDate = formatISO(dateRange.endDate)
         }
 
@@ -80,7 +80,7 @@ const SearchModal = () => {
 
         setStep(STEPS.LOCATION);
         searchModal.onClose();
-       
+
         router.push(url);
     }, [
         step,
@@ -96,18 +96,18 @@ const SearchModal = () => {
     ]);
 
     const actionLabel = useMemo(() => {
-        if (step === STEPS.INFO){
+        if (step === STEPS.INFO) {
             return 'Search';
         }
         return 'Next';
-    },[step]);
+    }, [step]);
 
     const secondaryActionLabel = useMemo(() => {
-        if (step === STEPS.LOCATION){
+        if (step === STEPS.LOCATION) {
             return undefined;
         }
         return 'Back';
-    },[step]);
+    }, [step]);
 
     let bodyContent = (
         <div className="flex flex-col gap-8">
@@ -120,7 +120,7 @@ const SearchModal = () => {
                 onChange={(value) => setLocation(value as CountrySelectValue)}
             />
             <hr />
-            <Map center={location?.latlng}/>
+            <Map center={location?.latlng} />
         </div>
     )
 
@@ -167,7 +167,7 @@ const SearchModal = () => {
             </div>
         )
     }
-    
+
     return (
         <Modal
             isOpen={searchModal.isOpen}
