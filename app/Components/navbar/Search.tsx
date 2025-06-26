@@ -92,7 +92,7 @@ const Search = () => {
                 >
                     {durationLabel}
                 </div>
-                <div 
+                <div
                     className="
                         text-sm
                         pl-6
